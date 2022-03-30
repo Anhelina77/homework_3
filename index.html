@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Год, года, лет</title>
+</head>
+<body>
+    <script>
+        let next = 1;
+        while (next) {
+                
+            let years = +prompt('Введите любое число');
+            
+            let number = years % 100;
+            if (number < 0) {
+                number *= -1;
+            }
+            if (number > 20) {
+                number = number % 10;
+            }
+            if (number == 1) {
+                alert(years + ' год.');
+            } else if (number >= 2 && number <= 4) {
+                alert(years + ' года.'); 
+            } else if (number > 4 || number == 0) {
+                alert(years + ' лет.');
+            } else { 
+                alert('Вы ввели неверное число!!!')
+            } 
+        }
+    </script>
+</body>
+</html>
